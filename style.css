@@ -1,152 +1,482 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* ===========================
+   FRESKO CHOICE WEBSITE V2
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+
+    --primary: #C8102E;
+    --primary-dark: #9B0D22;
+
+    --white: #ffffff;
+
+    --black: #222222;
+
+    --light: #f8f8f8;
+
+    --gray: #666;
+
+    --shadow: 0 12px 35px rgba(0, 0, 0, .12);
+
 }
 
-body{
+/* ===========================
+RESET
+=========================== */
 
-font-family:Arial,Helvetica,sans-serif;
-line-height:1.7;
-color:#333;
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
 
 }
 
-.container{
+body {
 
-width:90%;
-max-width:1100px;
-margin:auto;
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #222;
+    line-height: 1.7;
 
 }
+
+/* ===========================
+CONTAINER
+=========================== */
+
+.container {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+/* ===========================
+HEADER
+=========================== */
 
 header {
 
-    background: white;
-    padding: 12px 0;
+    background: #fff;
+
     position: sticky;
+
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+    z-index: 999;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
 
 }
-header .container{
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+header .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
 
 }
+
+/* ===========================
+LOGO
+=========================== */
 
 .logo img {
 
-    height: 72px;
+    height: 75px;
+
     display: block;
+
+    transition: .3s;
+
+}
+
+.logo img:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* ===========================
+NAVIGATION
+=========================== */
+
+nav {
+
+    display: flex;
+    align-items: center;
 
 }
 
 nav a {
 
-    margin-left: 35px;
     text-decoration: none;
-    font-weight: 600;
+
     color: #222;
-    transition: .25s;
+
+    margin-left: 35px;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    transition: .3s;
 
 }
 
 nav a:hover {
 
-    color: #C8102E;
+    color: var(--primary);
 
 }
 
-.hero{
+/* ===========================
+HERO
+=========================== */
 
-background:#f8f8f8;
-padding:100px 0;
-text-align:center;
+.hero {
 
-}
+    width: 100%;
 
-.hero h2{
+    background: white;
 
-font-size:48px;
-margin-bottom:20px;
-
-}
-
-.hero p{
-
-font-size:20px;
-max-width:700px;
-margin:auto;
+    overflow: hidden;
 
 }
 
-.button{
+.desktop-hero {
 
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#d62828;
-color:white;
-text-decoration:none;
-border-radius:6px;
+    display: block;
+
+    width: 100%;
+
+    height: auto;
 
 }
 
-section{
+.mobile-hero {
 
-padding:70px 0;
+    display: none;
 
-}
+    width: 100%;
 
-.cards{
-
-display:flex;
-gap:30px;
-margin-top:30px;
+    height: auto;
 
 }
 
-.card{
+/* ===========================
+SECTION
+=========================== */
 
-flex:1;
-padding:30px;
-border:1px solid #ddd;
-border-radius:10px;
-text-align:center;
+section {
 
-}
-
-footer{
-
-background:#222;
-color:white;
-text-align:center;
-padding:30px;
+    padding: 80px 0;
 
 }
 
-@media(max-width:768px){
+/* ===========================
+HEADINGS
+=========================== */
 
-header .container{
+h2 {
 
-flex-direction:column;
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 40px;
+
+    margin-bottom: 25px;
+
+    color: #222;
+
+}
+
+h3 {
+
+    font-family: 'Poppins', sans-serif;
+
+    margin-bottom: 15px;
 
 }
 
-.cards{
+/* ===========================
+TEXT
+=========================== */
 
-flex-direction:column;
+p {
+
+    font-size: 18px;
+
+    color: #555;
+
+    margin-bottom: 20px;
 
 }
 
-.hero h2{
+/* ===========================
+BUTTON
+=========================== */
 
-font-size:34px;
+.button {
+
+    display: inline-block;
+
+    padding: 16px 35px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: .3s;
 
 }
+
+.button:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+
+}
+
+/* ===========================
+CARDS
+=========================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+}
+
+.card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .15);
+
+}
+
+/* ===========================
+LIST
+=========================== */
+
+ul {
+
+    margin-top: 20px;
+
+    margin-left: 25px;
+
+}
+
+li {
+
+    margin-bottom: 10px;
+
+}
+
+/* ===========================
+CONTACT
+=========================== */
+
+#contact p {
+
+    font-size: 20px;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 50px 0;
+
+    text-align: center;
+
+    margin-top: 60px;
+
+}
+
+footer p {
+
+    color: white;
+
+    margin: 0;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:992px) {
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* ===========================
+MOBILE
+=========================== */
+
+@media(max-width:768px) {
+
+    header .container {
+
+        flex-direction: column;
+
+    }
+
+    .logo img {
+
+        height: 60px;
+
+        margin-bottom: 15px;
+
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    nav a {
+
+        margin: 10px;
+
+        font-size: 15px;
+
+    }
+
+    .desktop-hero {
+
+        display: none;
+
+    }
+
+    .mobile-hero {
+
+        display: block;
+
+    }
+
+    section {
+
+        padding: 60px 0;
+
+    }
+
+    h2 {
+
+        font-size: 30px;
+
+        text-align: center;
+
+    }
+
+    p {
+
+        text-align: center;
+
+        font-size: 17px;
+
+    }
+
+    .button {
+
+        display: block;
+
+        text-align: center;
+
+        width: 100%;
+
+        margin-top: 15px;
+
+    }
+
+    .card {
+
+        padding: 30px;
+
+    }
+
+}
+
+/* ===========================
+SMALL PHONE
+=========================== */
+
+@media(max-width:480px) {
+
+    .logo img {
+
+        height: 50px;
+
+    }
+
+    nav a {
+
+        font-size: 14px;
+
+    }
+
+    h2 {
+
+        font-size: 26px;
+
+    }
 
 }
