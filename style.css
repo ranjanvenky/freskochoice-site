@@ -147,36 +147,38 @@ nav a:hover {
 HERO
 =========================== */
 
-.hero {
+/* ===========================
+HERO
+=========================== */
 
-    width: 100%;
+.hero{
 
-    background: white;
-
-    overflow: hidden;
-
-}
-
-.desktop-hero {
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
+    width:100%;
+    background:#fff;
+    overflow:hidden;
+    line-height:0;
 
 }
 
-.mobile-hero {
+/* Desktop Hero */
 
-    display: none;
+.desktop-hero{
 
-    width: 100%;
-
-    height: auto;
+    display:block;
+    width:100%;
+    height:auto;
 
 }
 
+/* Mobile Hero */
+
+.mobile-hero{
+
+    display:none;
+    width:100%;
+    height:auto;
+
+}
 /* ===========================
 SECTION
 =========================== */
