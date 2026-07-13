@@ -371,6 +371,379 @@ RESPONSIVE
 MOBILE
 =========================== */
 
+/* ===========================
+   FRESKO CHOICE WEBSITE V2
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+
+    --primary: #C8102E;
+    --primary-dark: #9B0D22;
+
+    --white: #ffffff;
+
+    --black: #222222;
+
+    --light: #f8f8f8;
+
+    --gray: #666;
+
+    --shadow: 0 12px 35px rgba(0, 0, 0, .12);
+
+}
+
+/* ===========================
+RESET
+=========================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Inter', sans-serif;
+    background: #fff;
+    color: #222;
+    line-height: 1.7;
+
+}
+
+/* ===========================
+CONTAINER
+=========================== */
+
+.container {
+
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+/* ===========================
+HEADER
+=========================== */
+
+header {
+
+    background: #fff;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .08);
+
+}
+
+header .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+}
+
+/* ===========================
+LOGO
+=========================== */
+
+.logo img {
+
+    height: 75px;
+
+    display: block;
+
+    transition: .3s;
+
+}
+
+.logo img:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* ===========================
+NAVIGATION
+=========================== */
+
+nav {
+
+    display: flex;
+    align-items: center;
+
+}
+
+nav a {
+
+    text-decoration: none;
+
+    color: #222;
+
+    margin-left: 35px;
+
+    font-weight: 600;
+
+    font-size: 16px;
+
+    transition: .3s;
+
+}
+
+nav a:hover {
+
+    color: var(--primary);
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    width:100%;
+    background:#fff;
+    overflow:hidden;
+    line-height:0;
+
+}
+
+/* Desktop Hero */
+
+.desktop-hero{
+
+    display:block;
+    width:100%;
+    height:auto;
+
+}
+
+/* Mobile Hero */
+
+.mobile-hero{
+
+    display:none;
+    width:100%;
+    height:auto;
+
+}
+/* ===========================
+SECTION
+=========================== */
+
+section {
+
+    padding: 80px 0;
+
+}
+
+/* ===========================
+HEADINGS
+=========================== */
+
+h2 {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 40px;
+
+    margin-bottom: 25px;
+
+    color: #222;
+
+}
+
+h3 {
+
+    font-family: 'Poppins', sans-serif;
+
+    margin-bottom: 15px;
+
+}
+
+/* ===========================
+TEXT
+=========================== */
+
+p {
+
+    font-size: 18px;
+
+    color: #555;
+
+    margin-bottom: 20px;
+
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+.button {
+
+    display: inline-block;
+
+    padding: 16px 35px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+.button:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+
+}
+
+/* ===========================
+CARDS
+=========================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+}
+
+.card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .15);
+
+}
+
+/* ===========================
+LIST
+=========================== */
+
+ul {
+
+    margin-top: 20px;
+
+    margin-left: 25px;
+
+}
+
+li {
+
+    margin-bottom: 10px;
+
+}
+
+/* ===========================
+CONTACT
+=========================== */
+
+#contact p {
+
+    font-size: 20px;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer {
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 50px 0;
+
+    text-align: center;
+
+    margin-top: 60px;
+
+}
+
+footer p {
+
+    color: white;
+
+    margin: 0;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:992px) {
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* ===========================
+MOBILE
+=========================== */
+
 @media(max-width:768px) {
 
     header .container {
@@ -457,6 +830,31 @@ MOBILE
 
 }
 
+/* ===========================
+SMALL PHONE
+=========================== */
+
+@media(max-width:480px) {
+
+    .logo img {
+
+        height: 50px;
+
+    }
+
+    nav a {
+
+        font-size: 14px;
+
+    }
+
+    h2 {
+
+        font-size: 26px;
+
+    }
+
+}
 /* ===========================
 SMALL PHONE
 =========================== */
